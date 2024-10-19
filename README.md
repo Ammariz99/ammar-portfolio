@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ammar's Portfolio
 
-## Getting Started
+Ammar's Portfolio is a personal website designed to showcase the skills and projects of Syed Ammar Bukhari, a passionate web developer. The portfolio provides a platform for potential clients and employers to view Ammar's work, skills, and contact information.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Introduction Section**: A brief overview of Ammar's background, skills, and interests in web development.
+- **Download CV**: An option to download Ammar's CV in PDF format for easy access.
+- **Social Media Links**: Links to Ammar's profiles on various social media platforms, enabling easy networking.
+- **Responsive Design**: The portfolio is fully responsive, ensuring a seamless experience on devices of all sizes.
+- **Header Component**: A clean and accessible navigation bar that includes a logo, navigation links, and a "Hire Me" button.
+- **Mobile Navigation**: A collapsible menu for mobile devices to facilitate easy navigation.
+- **Navigation Component**: Renders the navigation menu with active link highlighting for better user experience.
+- **Page Transition**: Smooth transitions between sections to enhance the overall user experience.
+- **Rotating Circle Profile Photo**: A profile picture is displayed inside a continuously rotating circle. The circle has a dynamic stroke-dash animation, and the image inside fades in with a slight delay after the page reloads. This animation is achieved using `Framer Motion`.
+  
+  - The rotation and stroke-dash animation create a smooth visual experience, with the image being statically displayed inside the circle.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Animated Social Media Icons**: Social media icons are displayed, linking to Ammar's GitHub, LinkedIn, Upwork, and Fiverr profiles. The icons are interactive and designed using `React Icons`.
 
-## Learn More
+  - These links are styled to match the portfolio's design and allow users to connect easily.
 
-To learn more about Next.js, take a look at the following resources:
+- **Animated Stairs Transition**: A set of animated stairs provides a unique page transition effect. Each "stair" is a div that moves smoothly across the screen during page changes, creating a staggered staircase effect using `Framer Motion`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  - The stair animation runs in reverse when the component exits, adding a dynamic visual effect to the transition between pages.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Stair Transition Handler**: This feature manages the page transitions with stairs using `AnimatePresence` from `Framer Motion`. When navigating between pages, the stair effect adds a layer of sophistication to the portfolio.
 
-## Deploy on Vercel
+- **Stats Section**: An animated statistics section using the `CountUp` library to display key stats like "Months of Experience", "Projects Completed", and "Technologies Used". Each stat is animated, providing an engaging experience.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  - This section highlights Ammar's professional milestones with animated counters.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **Next.js**: A React framework for server-rendered applications.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **Framer Motion**: A powerful library for creating animations.
+- **React Icons**: A library for using icons in React applications.
+- **CountUp.js**: A library for animating numbers and statistics.
+- **PDF.js**: A JavaScript library for rendering PDF documents in web applications.
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone <repository-url>
+   cd <project-folder>
+
+2. **Navigate to the project directory**:
+   
+   ```bash
+   cd <project-folder>
+
+3. **Install dependencies:**:
+  
+   ```bash
+   npm Install
+
+4. **Run the development server**:
+   
+   ```bash
+   npm run dev 
+
+5. **Accessing the Application**
+  Once the server is running, open your browser and navigate to   http://localhost:3000 to view the application live 
+
+## Usage
+
+Once the development server is running, you can explore Ammar's portfolio by clicking through the different sections, downloading the CV, and visiting social media links. The site is designed to be user-friendly, allowing visitors to easily navigate and find information.
+
+
+## 🔗 Links
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/syed-ammar-bukhari/)
+
+
+
+## Feedback
+
+This README includes all the new animated features like the rotating circle photo, social media icons, stair transitions, and stats with their descriptions, as well as the usage of libraries like `Framer Motion` and `CountUp`
+
