@@ -14,7 +14,6 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
-
 /**
  * About section data
  * @type {Object}
@@ -43,7 +42,7 @@ const about = {
       fieldName: "Experience",
       fieldValue: "06+ Months",
     },
-    
+
     {
       fieldName: "Open to work",
       fieldValue: "Available",

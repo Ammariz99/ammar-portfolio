@@ -23,8 +23,8 @@ const Home = () => {
    */
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/cv.pdf"; 
-    link.download = "Syed_Ammar_Bukhari_CV.pdf"; 
+    link.href = "/cv.pdf";
+    link.download = "Syed_Ammar_Bukhari_CV.pdf";
     link.click();
   };
   return (
@@ -39,7 +39,9 @@ const Home = () => {
               <span className="text-accent">Syed Ammar Bukhari</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-            I'm a passionate web developer with a focus on creating dynamic, responsive websites and intuitive user experiences.Explore my work and let's collaborate on something amazing!
+              I'm a passionate web developer with a focus on creating dynamic,
+              responsive websites and intuitive user experiences.Explore my work
+              and let's collaborate on something amazing!
             </p>
             {/**Button and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">

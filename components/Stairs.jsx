@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion"; // Destructure motion from framer-motion
 
-
 /**
  * Animation variants for the stairs.
  * - `initial`: Defines the starting position of the stairs.
@@ -19,7 +18,6 @@ const stairAnimation = {
     top: ["100%", "0%"],
   },
 };
-
 
 /**
  * Calculate the reverse index for staggered animation delay.

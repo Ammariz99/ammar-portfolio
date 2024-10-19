@@ -11,11 +11,19 @@ import { TbBrandFiverr } from "react-icons/tb";
 
 const socials = [
   { icon: <FaGithub />, path: "https://github.com/Ammariz99" },
-  { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/syed-ammar-bukhari/" },
+  {
+    icon: <FaLinkedin />,
+    path: "https://www.linkedin.com/in/syed-ammar-bukhari/",
+  },
   // { icon: <FaTwitter />, path: "" },
-   { icon: <FaUpwork />, path: "https://www.upwork.com/freelancers/~01909c6f8c91ddc381" },
-    { icon: <TbBrandFiverr />, path: "https://www.fiverr.com/ammariz99?public_mode=true" },
-
+  {
+    icon: <FaUpwork />,
+    path: "https://www.upwork.com/freelancers/~01909c6f8c91ddc381",
+  },
+  {
+    icon: <TbBrandFiverr />,
+    path: "https://www.fiverr.com/ammariz99?public_mode=true",
+  },
 ];
 
 /**

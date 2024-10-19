@@ -10,8 +10,6 @@ const services = [
     desc: "I build fast, scalable, and secure web applications using the latest technologies.",
     href: "",
   },
-  
-  
 ];
 
 /**

@@ -20,7 +20,7 @@ const stats = [
 /**
  * Stats component displays key statistics with animated counting effect.
  *
- * It utilizes the CountUp library to create a visually appealing 
+ * It utilizes the CountUp library to create a visually appealing
  * counting animation for the statistics provided in the stats array.
  *
  * @returns {JSX.Element} The JSX for the Stats component.

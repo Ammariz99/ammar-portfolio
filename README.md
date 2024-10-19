@@ -24,7 +24,7 @@ Ammar's Portfolio is a personal website designed to showcase the skills and proj
 - **Navigation Component**: Renders the navigation menu with active link highlighting for better user experience.
 - **Page Transition**: Smooth transitions between sections to enhance the overall user experience.
 - **Rotating Circle Profile Photo**: A profile picture is displayed inside a continuously rotating circle. The circle has a dynamic stroke-dash animation, and the image inside fades in with a slight delay after the page reloads. This animation is achieved using `Framer Motion`.
-  
+
   - The rotation and stroke-dash animation create a smooth visual experience, with the image being statically displayed inside the circle.
 
 - **Animated Social Media Icons**: Social media icons are displayed, linking to Ammar's GitHub, LinkedIn, Upwork, and Fiverr profiles. The icons are interactive and designed using `React Icons`.
@@ -60,36 +60,40 @@ To set up the project locally, follow these steps:
    ```bash
    git clone <https://github.com/Ammariz99/ammar-portfolio.git>
 
+   ```
 
 2. **Navigate to the project directory**:
-   
+
    ```bash
    cd <ammar-portfolio>
 
+   ```
+
 3. **Install dependencies:**:
-  
+
    ```bash
    npm Install
 
+   ```
+
 4. **Run the development server**:
-   
+
    ```bash
-   npm run dev 
+   npm run dev
+
+   ```
 
 5. **Accessing the Application**
-  Once the server is running, open your browser and navigate to   http://localhost:3000 to view the application live 
+   Once the server is running, open your browser and navigate to http://localhost:3000 to view the application live
 
 ## Usage
 
 Once the development server is running, you can explore Ammar's portfolio by clicking through the different sections, downloading the CV, and visiting social media links. The site is designed to be user-friendly, allowing visitors to easily navigate and find information.
 
-
 ## 🔗 Links
+
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/syed-ammar-bukhari/)
-
-
 
 ## Feedback
 
 This README includes all the new animated features like the rotating circle photo, social media icons, stair transitions, and stats with their descriptions, as well as the usage of libraries like `Framer Motion` and `CountUp`
-

@@ -34,7 +34,7 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#00ff99"  // Circle stroke color
+            stroke="#00ff99" // Circle stroke color
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -54,7 +54,7 @@ const Photo = () => {
         <div className="relative w-[250px] h-[250px] xl:w-[450px] xl:h-[450px] ml-7 mt-5 mix-blend-lighten">
           <Image
             src="/assets/profile-pic.png"
-            priority  // Preloads the image
+            priority // Preloads the image
             quality={100}
             fill // Fills the container
             sizes="(max-width: 1280px) 300px, 480px"
