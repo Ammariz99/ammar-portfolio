@@ -228,7 +228,7 @@ const Resume = () => {
                           </h3>
                           <div className="flex items-center gap-3">
                             {/**dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            <span className="w-[6px] h-[6px] rounded-full mb-8 bg-accent"></span>
                             <p className="text-white/60">{item.institution}</p>
                           </div>
                         </li>

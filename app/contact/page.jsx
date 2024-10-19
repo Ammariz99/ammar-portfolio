@@ -19,6 +19,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const info = [
   // {
@@ -38,7 +39,46 @@ const info = [
   },
 ];
 
-const contact = () => {
+const Contact = () => {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+    // Validate first name
+    if (!firstname) {
+      newErrors.firstname = "First name is required.";
+    }
+    // Validate last name
+    if (!lastname) {
+      newErrors.lastname = "Last name is required.";
+    }
+    // Validate email
+    if (!email) {
+      newErrors.email = "Email is required.";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Email address is invalid.";
+    }
+    return newErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
+      // Submit the form or perform further actions
+      console.log("Form submitted:", { firstname, lastname, email });
+      // Clear the form
+      setFirstname("");
+      setLastname("");
+      setEmail("");
+      setErrors({});
+    }
+  };
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -52,7 +92,10 @@ const contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/** form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form
+              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+              onSubmit={handleSubmit}
+            >
               <h3 className="text-4xl text-accent">Let's work together</h3>
               <p className="text-white/60">
                 {" "}
@@ -62,10 +105,46 @@ const contact = () => {
               </p>
               {/**Input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email address" />
-                <Input type="phone" placeholder="Phone number" />
+                <div>
+                  <Input
+                    type="text"
+                    placeholder="Firstname"
+                    value={firstname}
+                    onChange={(e) => setFirstname(e.target.value)}
+                  />
+                  {errors.firstname && (
+                    <span className="text-red-500 text-sm">
+                      {errors.firstname}
+                    </span>
+                  )}
+                </div>
+                <div>
+                  <Input
+                    type="text"
+                    placeholder="Lastname"
+                    value={lastname}
+                    onChange={(e) => setLastname(e.target.value)}
+                  />
+                  {errors.lastname && (
+                    <span className="text-red-500 text-sm">
+                      {errors.lastname}
+                    </span>
+                  )}
+                </div>
+                <div>
+                  <Input
+                    type="email"
+                    placeholder="Email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  {errors.email && (
+                    <span className="text-red-500 text-sm">{errors.email}</span>
+                  )}
+                </div>
+                <div>
+                  <Input type="phone" placeholder="Phone number" />
+                </div>
               </div>
               {/** select */}
               <Select>
@@ -87,7 +166,7 @@ const contact = () => {
                 placeholder="Type your message here"
               />
               {/**button */}
-              <Button size="md" className="max-w-40">
+              <Button size="md" className="max-w-40" type="submit">
                 Send Message
               </Button>
             </form>
@@ -116,4 +195,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;
