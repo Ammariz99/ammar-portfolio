@@ -58,13 +58,13 @@ To set up the project locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone <repository-url>
-   cd <project-folder>
+   git clone <https://github.com/Ammariz99/ammar-portfolio.git>
+
 
 2. **Navigate to the project directory**:
    
    ```bash
-   cd <project-folder>
+   cd <ammar-portfolio>
 
 3. **Install dependencies:**:
   
