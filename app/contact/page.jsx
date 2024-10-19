@@ -43,6 +43,7 @@ const Contact = () => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [errors, setErrors] = useState({});
 
   const validateForm = () => {
@@ -60,6 +61,12 @@ const Contact = () => {
       newErrors.email = "Email is required.";
     } else if (!/\S+@\S+\.\S+/.test(email)) {
       newErrors.email = "Email address is invalid.";
+    }
+    // Validate phone number
+    if (!phone) {
+      newErrors.phone = "Phone number is required.";
+    } else if (!/^\d{10}$/.test(phone)) {
+      newErrors.phone = "Phone number must be 10 digits.";
     }
     return newErrors;
   };
@@ -105,46 +112,49 @@ const Contact = () => {
               </p>
               {/**Input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <Input
-                    type="text"
-                    placeholder="Firstname"
-                    value={firstname}
-                    onChange={(e) => setFirstname(e.target.value)}
-                  />
-                  {errors.firstname && (
-                    <span className="text-red-500 text-sm">
-                      {errors.firstname}
-                    </span>
-                  )}
-                </div>
-                <div>
-                  <Input
-                    type="text"
-                    placeholder="Lastname"
-                    value={lastname}
-                    onChange={(e) => setLastname(e.target.value)}
-                  />
-                  {errors.lastname && (
-                    <span className="text-red-500 text-sm">
-                      {errors.lastname}
-                    </span>
-                  )}
-                </div>
-                <div>
-                  <Input
-                    type="email"
-                    placeholder="Email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                  {errors.email && (
-                    <span className="text-red-500 text-sm">{errors.email}</span>
-                  )}
-                </div>
-                <div>
-                  <Input type="phone" placeholder="Phone number" />
-                </div>
+                <Input
+                  type="text"
+                  placeholder="Firstname"
+                  value={firstname}
+                  onChange={(e) => setFirstname(e.target.value)}
+                />
+                {errors.firstname && (
+                  <span className="text-red-500 text-sm">
+                    {errors.firstname}
+                  </span>
+                )}
+
+                <Input
+                  type="text"
+                  placeholder="Lastname"
+                  value={lastname}
+                  onChange={(e) => setLastname(e.target.value)}
+                />
+                {errors.lastname && (
+                  <span className="text-red-500 text-sm">
+                    {errors.lastname}
+                  </span>
+                )}
+
+                <Input
+                  type="email"
+                  placeholder="Email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                {errors.email && (
+                  <span className="text-red-500 text-sm">{errors.email}</span>
+                )}
+
+                <Input
+                  type="text"
+                  placeholder="Phone number"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+                {errors.phone && (
+                  <span className="text-red-500 text-sm">{errors.phone}</span>
+                )}
               </div>
               {/** select */}
               <Select>
