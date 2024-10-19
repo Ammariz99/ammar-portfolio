@@ -106,7 +106,7 @@ const projects = [
  * @component
  * @returns {JSX.Element} The rendered Work section containing project details and images.
  */
-const work = () => {
+const Work = () => {
   const [project, setProject] = useState(projects[0]);
 
   /**
@@ -230,4 +230,4 @@ const work = () => {
   );
 };
 
-export default work;
+export default Work;
