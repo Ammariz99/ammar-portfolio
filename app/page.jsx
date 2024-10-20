@@ -35,13 +35,24 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none mt-8 ">
             <span className="text-xl">Software Engineer</span>
             <h1 className="h1 mb-6">
-              Hello I'm <br />{" "}
-              <span className="text-accent">Syed Ammar Bukhari</span>
+              Hi I'm
+              <br /> <span className="text-accent">Syed Ammar Bukhari</span>
             </h1>
+            <span className="text-xl text-accent">
+              Available and excited to work with you.
+            </span>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I'm a passionate web developer with a focus on creating dynamic,
-              responsive websites and intuitive user experiences.Explore my work
-              and let's collaborate on something amazing!
+              Passionate web developer creating dynamic, responsive websites.
+              Explore my work and let's discuss on
+              <a
+                href="mailto:shah.ammar9919@gmail.com"
+                className="text-white/80 "
+              >
+                <span className="text-white/80  no-underline hover:text-accent">
+                  {" "}
+                  shah.ammar9919@gmail.com{" "}
+                </span>
+              </a>
             </p>
             {/**Button and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -51,7 +62,7 @@ const Home = () => {
                 className="uppercase flex items-center gap-2"
                 onClick={handleDownloadCV}
               >
-                <span>Download CV</span>
+                <span>My Resume</span>
                 <FiDownload className="text-xl" />
               </Button>
               <div className="mb-8 xl:mb-0">

@@ -66,7 +66,7 @@ const experience = {
   icon: <MdOutlineWorkHistory />,
   title: "My Experience",
   description:
-    "I have worked on various projects and gained experience in different areas of software development",
+    "I've worked on a diverse range of projects, gaining valuable experience across various aspects of software development.",
   items: [
     {
       company: "Programmers Force",
@@ -88,7 +88,7 @@ const education = {
   icon: <GiGraduateCap />,
   title: "My Education",
   description:
-    " I have completed my education from various institutions and gained knowledge in different areas",
+    " I have completed my education at several institutions, acquiring knowledge in a variety of fields.",
   items: [
     {
       institution: "University of Management & Tecnology (UMT)",
@@ -112,7 +112,8 @@ const education = {
  */
 const skills = {
   title: "My Skills",
-  description: "I have gained skills in various areas of software development",
+  description:
+    "I have developed skills across multiple areas of software development.",
   skillList: [
     {
       icon: <FaHtml5 className="text-[#dd4b25]" />,

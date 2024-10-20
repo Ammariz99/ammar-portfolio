@@ -22,11 +22,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const info = [
-  // {
-  //   icon: <FaPhoneAlt/>,
-  //   title: 'Phone',
-  //   description: ""
-  // },
   {
     icon: <FaEnvelope />,
     title: "Email",
@@ -39,6 +34,12 @@ const info = [
   },
 ];
 
+/**
+ * Contact component that renders a contact form and displays contact information.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered contact section.
+ */
 const Contact = () => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
@@ -46,6 +47,11 @@ const Contact = () => {
   const [phone, setPhone] = useState("");
   const [errors, setErrors] = useState({});
 
+  /**
+   * Validates the contact form inputs.
+   *
+   * @returns {Object} An object containing validation errors, if any.
+   */
   const validateForm = () => {
     const newErrors = {};
     // Validate first name
@@ -70,7 +76,11 @@ const Contact = () => {
     }
     return newErrors;
   };
-
+  /**
+   * Handles form submission, validating inputs and resetting the form on success.
+   *
+   * @param {React.FormEvent<HTMLFormElement>} e - The form submission event.
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validateForm();
@@ -83,9 +93,11 @@ const Contact = () => {
       setFirstname("");
       setLastname("");
       setEmail("");
+      setPhone("");
       setErrors({});
     }
   };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -105,76 +117,88 @@ const Contact = () => {
             >
               <h3 className="text-4xl text-accent">Let's work together</h3>
               <p className="text-white/60">
-                {" "}
                 I'm excited to collaborate on creative projects! Whether it's a
                 website, design, or a digital solution, let's connect and make
                 your ideas a reality.
               </p>
               {/**Input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input
-                  type="text"
-                  placeholder="Firstname"
-                  value={firstname}
-                  onChange={(e) => setFirstname(e.target.value)}
-                />
-                {errors.firstname && (
-                  <span className="text-red-500 text-sm">
-                    {errors.firstname}
-                  </span>
-                )}
-
-                <Input
-                  type="text"
-                  placeholder="Lastname"
-                  value={lastname}
-                  onChange={(e) => setLastname(e.target.value)}
-                />
-                {errors.lastname && (
-                  <span className="text-red-500 text-sm">
-                    {errors.lastname}
-                  </span>
-                )}
-
-                <Input
-                  type="email"
-                  placeholder="Email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                {errors.email && (
-                  <span className="text-red-500 text-sm">{errors.email}</span>
-                )}
-
-                <Input
-                  type="text"
-                  placeholder="Phone number"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                />
-                {errors.phone && (
-                  <span className="text-red-500 text-sm">{errors.phone}</span>
-                )}
+                <div className="flex flex-col">
+                  <Input
+                    className="w-full"
+                    type="text"
+                    placeholder="Firstname"
+                    value={firstname}
+                    onChange={(e) => setFirstname(e.target.value)}
+                  />
+                  {errors.firstname && (
+                    <span className="text-red-500 text-sm">
+                      {errors.firstname}
+                    </span>
+                  )}
+                </div>
+                <div className="flex flex-col">
+                  <Input
+                    className="w-full"
+                    type="text"
+                    placeholder="Lastname"
+                    value={lastname}
+                    onChange={(e) => setLastname(e.target.value)}
+                  />
+                  {errors.lastname && (
+                    <span className="text-red-500 text-sm">
+                      {errors.lastname}
+                    </span>
+                  )}
+                </div>
+                <div className="flex flex-col">
+                  <Input
+                    className="w-full"
+                    type="email"
+                    placeholder="Email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  {errors.email && (
+                    <span className="text-red-500 text-sm">{errors.email}</span>
+                  )}
+                </div>
+                <div className="flex flex-col">
+                  <Input
+                    className="w-full"
+                    type="text"
+                    placeholder="Phone number"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                  />
+                  {errors.phone && (
+                    <span className="text-red-500 text-sm">{errors.phone}</span>
+                  )}
+                </div>
               </div>
               {/** select */}
-              <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a Service " />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Select a Service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">UI/UX Design</SelectItem>
-                    <SelectItem value="mst">Logo Design</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
+              <div className="flex flex-col">
+                <Select>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select a Service" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>Select a Service</SelectLabel>
+                      <SelectItem value="est">Web Development</SelectItem>
+                      {/* <SelectItem value="cst">UI/UX Design</SelectItem>
+                      <SelectItem value="mst">Logo Design</SelectItem> */}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+              </div>
               {/**text area*/}
-              <Textarea
-                className="h-[200px]"
-                placeholder="Type your message here"
-              />
+              <div className="flex flex-col">
+                <Textarea
+                  className="h-[200px] w-full"
+                  placeholder="Type your message here"
+                />
+              </div>
               {/**button */}
               <Button size="md" className="max-w-40" type="submit">
                 Send Message

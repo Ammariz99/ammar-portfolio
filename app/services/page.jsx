@@ -7,7 +7,7 @@ const services = [
   {
     id: "01",
     title: "Web Development",
-    desc: "I build fast, scalable, and secure web applications using the latest technologies.",
+    desc: "I specialize in building fast, scalable, and secure web applications by leveraging cutting-edge technologies to deliver top-notch performance and user experience.",
     href: "",
   },
 ];
